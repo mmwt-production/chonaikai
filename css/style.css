@@ -521,3 +521,26 @@ img { max-width: 100%; height: auto; display: block; }
 
   .title-deco { font-size: 1.1rem; }
 }
+
+/* スマートフォン用の調整（画面幅が768px以下のとき） */
+@media screen and (max-width: 768px) {
+  .event-card {
+    flex-direction: column; /* 日付と内容を縦並びにする */
+    align-items: stretch;
+  }
+
+  .event-date-block {
+    width: 100% !important; /* 横幅をいっぱいに広げる */
+    padding: 10px !important;
+    flex-direction: row !important; /* 年月日を横並びにする */
+    justify-content: center;
+    gap: 10px;
+    height: auto !important;
+  }
+
+  .event-year, .event-month, .event-day {
+    font-size: 1.1rem !important; /* 文字の大きさをスマホに合わせる */
+    line-height: 1 !important;
+  }
+}
+
